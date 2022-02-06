@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Map Box -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/869c96fec9.js" crossorigin="anonymous"></script>
+   <!-- Tailwind CSS -->
+   <link rel="stylesheet" href="../src/styles.css" />
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="flex md:justify-between justify-center p-2 md:p-2 mx-10">
+        <div class="flex space-x-4">
+          <div>
+            <a href="#">
+              <img src="assets/images/hp-logo.svg" class="w-96 md:w-72" alt="Honeygo Pediatrics logo" /></a>
+          </div>
+        </div>
+        <div>
+        <p class="text-xl text-right mt-10 font-bold mont hidden md:block">There for you when you need us</p>
+        <p class="text-xl text-right mont hidden md:block bg-transparent md:mt-0 md:ml-4 focus:shadow-outline  -mt-10">Call us today:
+        <a class="phone-header"
+          href="tel:4109338101">410-933-8101</a></p>
+      </div>
+    </div>
+        <nav class="navbar">
+          <div class="mx-auto md:px-4 py-0 md:py-0">
+            <div class="flex justify-between md:justify-center mx-4">
+              <div class="md:hidden flex items-center">
+                <button class="mobile-menu-button">
+                  <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+              <!-- Nav -->
+              <div class="hidden md:flex items-center space-x-10" 
+              style="margin-top: -3px;">
+                <a href="index.html"
+                  class="px-4 py-4 text-lg whitespace-nowrapmd:mt-0  focus:outline-none focus:shadow-outline">Home</a>
+                <div>
+                  <a href="#" class="dropdwn-menu-item px-4 py-4 text-lg whitespace-nowrap md:mt-0 nav-styles focus:outline-none focus:shadow-outline">Services</a>
+                <!-- Dropdown menu, show/hide based on menu state. -->
+                <div class="dropdwn-menu hidden absolute mt-5 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                  <div class="py-1" role="none">
+                    <a href="new-patients.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">New Patients</a>
+                    <a href="well-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Well Visits</a>
+                    <a href="sick-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Sick Visits</a>
+                    <a href="annual-physical.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Annual Physical</a>
+                    <a href="work-school-travel-exams.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Work, School, And Travel Exams</a>
+                    <a href="sport-physicals.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">School & Sports Physicals</a>
+                    <a href="immunizations-and-shots.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Immunizations</a>
+                    <a href="virtual-medical-services.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Virtual Medical Services</a>
+                    <a href="https://www.aap.org/" target="_blank" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Resources</a>
+                  </div>
+                </div>
+                </div>
+                <a href="staff.html"
+                  class="px-4 py-4 text-lg whitespace-nowrap md:mt-0 nav-styles focus:outline-none focus:shadow-outline">Our Providers</a>
+                <a href="insurance.html" class="px-4 py-4 text-lg whitespace-nowrap md:mt-0 nav-styles focus:outline-none focus:shadow-outline">Insurance & Payment</a>
+                <a href="contact.html" class="px-4 py-4 text-lg whitespace-nowrap md:mt-0 nav-styles focus:outline-none focus:shadow-outline">Contact</a>
+              </div>
+              <!-- Mobile button goes here -->
+              <div class="md:hidden flex items-center py-4 ">
+                <a class="text-xl" href="tel:4109338101"> 410-933-8101</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <!-- Mobile menu -->
+          <div class="mobile-menu text-center hidden md:hidden">
+            <a href="index.html" class="text-3xl block py-2 px-4 hover:bg-gray-200">Home</a>
+            <a href="#" class="dropdwn-menu-item-mobile text-3xl block py-2 px-4 hover:bg-gray-200">Services</a>
+            <!--Dropdown menu, show/hide based on menu state. -->
+            <div class="dropdwn-menu-mobile hidden rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div class="py-1" role="none">
+                <a href="new-patients.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-0">New Patients</a>
+                <a href="well-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-1">Well Visits</a>
+                <a href="sick-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Sick Visits</a>
+                <a href="annual-physical.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Annual Physical</a>
+                <a href="work-school-travel-exams.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Work, School, And Travel Exams</a>
+                <a href="sport-physicals.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">School & Sports Physicals</a>
+                <a href="immunizations-and-shots.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Immunizations</a>
+                <a href="virtual-medical-services.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Virtual Medical Services</a>
+                <a href="https://www.aap.org/" target="_blank" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Resources</a>
+                </div>
+                </div>
+            <a href="staff.html" class="text-3xl block py-2 px-4 hover:bg-gray-200">Meet the Staff</a>
+            <a href="insurance.html" class="text-3xl block py-2 px-4 hover:bg-gray-200">Insurance & Payment</a>
+            <a href="contact.html" class="text-3xl block py-2 px-4 hover:bg-gray-200">Contact</a>
+          </div>
+        </nav>
+        <div class="text-center text-lg emergency py-5">In case of an emergency, dial 911</div>
+      </header>
+
+      <!-- Welcome Section -->
+     <section>
+      <hero id="showcase">
+        <div class="transparent my-20">
+          <div class="welcome-div">
+            <h1
+              class="w-26 mt-8 text-center md:text-left md:mt-12 lg:mt-12 xl:mt-12 text-4xl md:text-4xl xl:text-4xl">
+              Welcome to <br />
+              Honeygo Pediatrics
+            </h1>
+            <br />
+            <h2 class="w-26 md:max-w-md lg:max-w-md text-center md:text-left text-2xl md:text-xl xl:text-xl mont">
+              When you choose Honeygo Pediatrics, you can feel confident that
+              you are teaming with knowledgeable, compassionate professionals
+              who have dedicated their careers to child-focused health care.
+            </h2>
+            <div class="text-center md:text-left md:ml-40">
+              <!-- See more button smooth scroll to services section-->
+              <a href="#overview">
+                <button class="btn-custom1 mont mt-5 text-white font-bold py-2 px-4 rounded">
+                Services
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </hero>
+    </section>
+
+    <!-- Image cards -->
+    <section class="px-5 md:p-10 my-10">
+    <div class="md:mx-5 grid gap-6 grid-cols-1 md:grid-cols-3">
+      <a href="new-patients.html">
+      <div><div class="img-container hover:opacity-50 bg-opacity-90 duration-300">
+          <img src="./assets/images/new-patient.jpg" alt="a group of kids laughing and smiling" style="width:100%;">
+          <div class="centered uppercase text-2xl card-text">new patients</div>
+        </div></div>
+      </a>
+      <a href="#">
+        <div><div class="img-container hover:opacity-50 bg-opacity-90 duration-300">
+          <img src="./assets/images/building.jpg" alt="Outside image of whitemarsh health center" style="width:100%;">
+          <div class="centered uppercase text-2xl card-text">contact us</div>
+        </div></div>
+        </a>
+        <a href="https://www.aap.org/" target="_blank">
+        <div><div class="img-container hover:opacity-50 bg-opacity-90 duration-300">
+        <img src="./assets/images/resources.jpg" alt="a mom giving her young daughter daughter a piggyback ride laughing" style="width:100%;">
+        <div class="centered uppercase text-2xl card-text">resources</div>
+      </div></div>
+      </a>
+    </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="gradient-grey py-10">
+    <h1 class="title text-3xl text-center"> Experience the Honeygo Difference!</h1>
+    <div class="container1 md:px-40 text-center">
+      <p class="mont mt-5 text p-2"><span
+        class="text-black italic text-lg font-bold">Serving the local community for over 20 years,</span> Honeygo Pediatrics provides quality, compassionate care from <span
+        class="text-black italic text-lg font-bold">birth</span> up to <span
+        class="text-black italic text-lg font-bold">21 years</span> of age. We are a small tight night practice specializing in care for infants, children, adolescents, and young adults. Our team of board certified
+        pediatricians, nurse practitioners and certified medical assistants are trained to provide the best care for our
+        patients and their families.</p>
+        <p class="mt-5 mont text"> Make an appointment today! Please call  <a class="phone"
+          href="tel:4109338101">410-933-8101</a> </p> 
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="overview">
+      <div class="container mx-auto pb-20 px-5 mt-20">
+          <h1 class="title text-3xl text-center mb-10">Our Services</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="well-visits.html">
+          <div class="zoom select-service flex-col text-center justify-center">
+            <i class="far fa-band-aid service-icon"></i> 
+            <h2 class="service-name">Well Visits</h2>
+              <h2 class="service-p mont">Well visits are crucial to your the child's growth and development in order to find or prevent problems.</h2>
+          </div></a>
+          <a href="sick-visits.html">
+          <div class="zoom select-service flex-col text-center justify-center">
+            <i class="far fa-viruses service-icon"></i>
+            <h2 class="service-name">Sick Visits</h2>
+              <p class="service-p mont">Is your child feeling under the weather? Schedule a sick appointment with us today.</p>
+          </div></a>
+          <a href="annual-physical.html">
+          <div class="zoom select-service flex-col text-center justify-center">
+            <i class="far fa-weight service-icon"></i> 
+            <h2 class="service-name">Annual Physical</h2>
+              <p class="service-p mont">Physical exams are critical checkpoints in your child’s health and growth. Regular physicals are an important part of keeping your children happy.</p>
+          </div></a>
+          <a href="immunizations-and-shots.html">
+          <div class="zoom select-service flex-col text-center justify-center"> 
+            <i class="far fa-syringe service-icon"></i>
+            <h2 class="service-name">Immunizations and flu shots</h2>
+              <p class="service-p mont">Flu shots and other vaccines. COVID-19 shots are available for kids 12 years old and over.</p>
+          </div></a>
+          <a href="sport-physicals.html">
+          <div class="zoom select-service flex-col text-center justify-center"> 
+            <i class="far fa-futbol service-icon"></i>
+            <h2 class="service-name">School And Sports Physicals</h2>
+              <p class="service-p mont">Is your child trying out for a school sport? It is required that your child is certified by a healthcare provider prior to participating.</p>
+          </div></a>
+          <a href="work-school-travel-exams.html">
+          <div class="zoom select-service flex-col text-center justify-center"> 
+            <i class="far fa-notes-medical service-icon"></i>
+            <h2 class="service-name">Work, School, And Travel Exams</h2>
+              <p class="service-p mont">Children should have a medical examination prior to attending school or work, or engaging in travel. All involve protecting individual children and others around them.</p>
+          </div></a>
+          <div class="flex-col text-center justify-center"> 
+          </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            <div></div>
+          <a href="virtual-medical-services.html">
+          <div class="zoom select-service flex-col text-center justify-center"> 
+            <i class="far fa-phone-laptop service-icon"></i>
+            <h2 class="service-name">Virtual Medical Services</h2>
+              <p class="service-p mont">Ask about our virtual medical services. Telemedicine is available for most illnesses.</p>
+          </div></a>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review / Testimonial slider -->
+    <section class="hero testimonials-section sub-font" id="hero-4">
+      <div class="custom-shape-divider-top-1642795764">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+        </div> 
+        <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+        <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+        <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+        <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+        <input type="radio" name="slider" title="slide5" class="slider__nav"/>
+        <div class="slider__inner">
+        <div class="slider__contents -mt-20 md:mt-0">
+          <quote>&rdquo;</quote>
+          <p class="slider__txt text-sm md:text-lg">My husband and I are so thankful for Dr. Wisinski's quick action and confidence in diagnosing our son. She knew exactly what to test for and had us on track with a plan to help him heal. We are grateful to the doctors and nurse practitioners for being thorough and returning our calls when we were nervous/worried about what to do. Shout out to the front office that took multiple calls/messages from a worried Mom! Thank you!</p>
+          <h2 class="slider__caption">Rosemary L.</h2>
+        </div>
+        <div class="slider__contents -mt-20 md:mt-0">
+          <quote>&rdquo;</quote>
+          <p class="slider__txt text-sm md:text-lg">Dr. Wisinski has been my Children’s primary care physician for over 10 years. Her professionalism, expertise and knowledge has been outstanding. She’s currently seeing my youngest one and every time I go I know that my little one is in good hands. I would highly recommend Dr. Wisinski! I would also like to mention Mrs. Bonnie. She works in the office and I highly recommend her work as well. She always takes questions, answers calls and is always there to help out in any way.</p>
+          <h2 class="slider__caption">A. Czubernat</h2>
+        </div>
+        <div class="slider__contents">
+          <quote>&rdquo;</quote>
+          <p class="slider__txt text-sm md:text-lg">My kids have been here since birth they are 10 and 13 I see dr Wisinski and dr Murakoshi and they have always been great and also Bonnie is amazing super helpful.</p>
+          <h2 class="slider__caption">Claudia H.</h2>
+        </div>
+        <div class="slider__contents">
+          <quote>&rdquo;</quote>
+          <p class="slider__txt text-sm md:text-lg">I've never had any issues. My 13 yr.old and 2 yr.old both go there since birth. I feel they have always been well taken care of.</p>
+          <h2 class="slider__caption">Laura R.</h2>
+        </div>
+        <div class="slider__contents">
+          <quote>&rdquo;</quote>
+          <p class="slider__txt text-sm md:text-lg">Great doctors and assistants! Always make my little one smile even when he’s getting immunizations</p>
+          <h2 class="slider__caption">Julie B.</h2>
+        </div>
+    </div>
+    </section>
+
+    <!-- footer -->
+    <section class="gradient-grey">
+      <footer class="footer gradient-grey pb-10 md:px-0 lg:px-20 2xl:px-60">
+      <div class="text-center">
+        <!-- to top button -->
+        <a href="#top">
+          <button class="mt-50 mb-10 hover:bg-blue-500 font-bold" id="myBtn">^</button>
+        </a>
+        </div>
+      <div class="hidden md:block">
+      <div class="grid grid-cols-1 md:grid-cols-3 sub-font">
+        <!-- address -->
+        <div class="text-center mt-5">
+          <div class="inline-block text-left text-sm 2xl:text-lg"><span
+              class="footer-header raleway font-bold md:mb-5">Contact</span><br><br>
+            <a class="mont text-sm" href="http://maps.google.com/?q=8114 Sandpiper Circle, Suite 100, Nottingham, Maryland, 21236">8114 Sandpiper Circle, Suite 100<br>Nottingham, MD 21236</a>         
+            <p class="pt-2 mont text-sm">Phone:<a href="tel:4109338101"> 410-933-8101</a></p>
+            <p class="pt-2 mont text-sm">Fax: 410-933-8106</p>
+          </div>
+        </div>
+        <!-- hours -->
+        <div class="text-center mt-5">
+          <div class="inline-block text-left text-sm 2xl:text-lg"><span
+              class="footer-header font-bold raleway">Hours</span>
+              <div class="mont text-sm">
+            <div class="mt-5">
+              <span>Monday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 8:00 PM **</span></div>
+            <div>
+              <span>Tuesday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <span>Wednesday &nbsp; &nbsp; &nbsp; 9:00 AM - 8:00 PM **</span>
+            </div>
+            <div>
+              <span>Thursday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <span>Friday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <span>Saturday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 12:30 PM</span>
+            </div>
+            <p class="text-xs lg:text-med text-center mt-2">** Rotating Monday and Wednesday</p>
+            <p class="text-xs lg:text-med text-center">for evening hours (5PM - 8PM).</p>
+          </div>
+        </div>
+        </div>
+        <!-- map -->
+        <div class="text-center mt-5">
+          <div class="inline-block text-left text-sm 2xl:text-lg"><span
+              class="footer-header raleway font-bold mt-5">Map</span>
+            <div id='map' class="mt-5 flex justify-center md:justify-start" style='width: 230px; height: 200px;'></div>
+          </div>
+        </div>
+        <div></div>
+        <!-- logo -->
+        <div class="grid grid-cols-1 md:grid-cols-1 sub-font">
+          <div class="flex justify-center ">
+            <img class="mt-5 md:p-0 w-44 md:w-86" src="assets/images/hp-logo.svg" />
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+        <!-- copyright -->
+        <div class="grid text-center grid-cols-1 md:grid-cols-1">
+          <div class="text-sm mt-5">&copy; Copyright 2022 <a href="https://alexandrahionis.com"><span
+                class="underline">AH Websites</span></a></div>
+        </div>
+        <div></div>
+        </div>
+      </div>
+      </div>
+      <!-- mobile footer -->
+      <div class="block md:hidden">
+        <div class="grid grid-cols-1 md:grid-cols-1 sub-font">
+          <!-- address -->
+          <div class="text-center pl-2">
+            <div class="inline-block text-center text-med"><span class="footer-header font-bold raleway">Contact</span><br><br>
+              <a class="text-sm" href="http://maps.google.com/?q=8114 Sandpiper Circle, Suite 100, Nottingham, Maryland, 21236">8114 Sandpiper Circle, Suite 100<br>Nottingham, MD 21236</a>
+              <p class="pt-2 text-sm">Phone:<a href="tel:4109338101"> 410-933-8101</a></p>
+              <p class="pt-2 text-sm">Fax: 410-933-8101</p>
+            </div>
+          </div>
+          <!-- map -->
+          <div class="text-center">
+            <div class="inline-block text-center text-med mt-10"><span class="footer-header font-bold raleway">Map</span>
+              <div id='map2' class="mt-5 flex justify-center md:justify-start" style='width: 230px; height: 200px;'></div>
+            </div>
+          </div>
+        </div>
+        <!-- hours -->
+        <div class=" text-center mt-5">
+          <div class="inline-block text-center text-med"><span class="footer-header font-bold raleway text-center">Hours</span>
+            <div class="text-left">
+              <div class="mont text-sm">
+            <div class="mt-5">
+              <span>Monday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 8:00 PM **</span></div>
+            <div>
+              <span>Tuesday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <span>Wednesday &nbsp; &nbsp; &nbsp; 9:00 AM - 8:00 PM **</span>
+            </div>
+            <div>
+              <span>Thursday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <span>Friday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <span>Saturday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9:00 AM - 12:30 PM</span>
+            </div>
+            <p class="text-xs lg:text-med text-center mt-2">** Rotating Monday and Wednesday</p>
+            <p class="text-xs lg:text-med text-center">for evening hours (5PM - 8PM).</p>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div></div>
+        <!-- logo -->
+        <div class="grid grid-cols-1 md:grid-cols-1 sub-font">
+          <div class="flex justify-center ">
+            <img class="mt-5 md:p-0 w-44 md:w-86" src="assets/images/hp-logo.svg" />
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+        <!-- copyright -->
+        <div class="grid text-center grid-cols-1 md:grid-cols-1">
+          <div class="text-sm mt-5 mont">&copy; Copyright 2022 <a href="https://alexandrahionis.com"><span class="underline">AH
+                Websites</span></a></div>
+        </div>
+        <div></div>
+      </div>
+    </footer>
+    </section>
+
+  <!-- Scripts -->
+   <!-- Mapbox -->
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <!-- Script.js -->
+  <script src="assets/script.js"></script>
+</body>
+</html>
