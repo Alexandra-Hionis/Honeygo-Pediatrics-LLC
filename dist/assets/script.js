@@ -47,3 +47,14 @@ var map2 = new mapboxgl.Map({
 const marker2 = new mapboxgl.Marker()
   .setLngLat([-76.47251, 39.37124])
   .addTo(map2);
+
+var map3 = new mapboxgl.Map({
+  container: "map3",
+  style: "mapbox://styles/mapbox/streets-v11",
+  center: [-76.47251, 39.37124], // starting position [lng, lat]
+  zoom: 14,
+});
+
+const marker3 = new mapboxgl.Marker()
+  .setLngLat([-76.47251, 39.37124])
+  .addTo(map3);
