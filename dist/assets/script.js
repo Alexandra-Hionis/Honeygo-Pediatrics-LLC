@@ -1,12 +1,3 @@
-// Accessibility button
-window.addEventListener(
-  "load",
-  function () {
-    new Accessibility();
-  },
-  false
-);
-
 // Navbar drop down functionality and mobile toggle button
 
 // grab everything we need

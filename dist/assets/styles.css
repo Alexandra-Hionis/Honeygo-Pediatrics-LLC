@@ -25,6 +25,73 @@ body {
 
 /* HOMEPAGE */
 
+/* Modal */
+.popup {
+  background-color: white;
+  padding: 30px 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 8px;
+  padding-bottom: 100px;
+}
+
+.popup button {
+  display: block;
+  margin: 0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* mobile */
+@media screen and (min-device-width: 300px) {
+  .popup {
+    width: 90vw;
+    top: 5%;
+  }
+}
+
+@media screen and (min-device-width: 480px) {
+  .popup {
+    width: 90vw;
+    top: 5%;
+  }
+}
+
+/* tablet */
+@media screen and (min-device-width: 481px) {
+  .popup {
+    width: 80vw;
+    top: 5%;
+  }
+}
+
+@media screen and (min-device-width: 768px) {
+  .popup {
+    width: 80vw;
+    top: 8%;
+  }
+}
+
+/* laptop and up*/
+@media screen and (min-device-width: 1024px) {
+  .popup {
+    width: 35vw;
+    top: 10%;
+  }
+}
+
+@media screen and (min-device-width: 2560px) {
+  .popup {
+    width: 35vw;
+    top: 10%;
+  }
+}
+
 /* Nav */
 
 .navbar {
@@ -70,6 +137,7 @@ body {
   );
   color: white;
 }
+
 .phone-header {
   color: #329bac;
   font-size: 1.4rem;
@@ -130,11 +198,11 @@ body {
 }
 
 .btn-custom1 {
-  background-color: #f7941e;
+  background-color: #e59659;
 }
 
 .phone {
-  color: #f7941e;
+  color: #e59659;
   font-size: 1.4rem;
   font-weight: bolder;
 }
@@ -293,7 +361,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.slider__nav {
+/* .slider__nav {
   width: 12px;
   height: 12px;
   margin: 80px 12px;
@@ -343,8 +411,8 @@ body {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-}
-.slider__contents {
+} */
+/* .slider__contents {
   height: 100%;
   text-align: center;
   display: -webkit-box;
@@ -366,8 +434,8 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-.slider__caption {
+} */
+.slider__reviewer {
   font-size: 14px;
   color: white;
   opacity: 0.5;
@@ -388,7 +456,7 @@ quote {
   margin-bottom: 0;
 }
 
-@-webkit-keyframes check {
+/* @-webkit-keyframes check {
   50% {
     outline-color: #333;
     box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
@@ -408,8 +476,87 @@ quote {
     outline-color: #333;
     box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
   }
+} */
+
+/*  */
+/* Style the .slides div */
+.slides {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
+/* Hide slide by default. Will control this with JavaScript */
+.slide {
+  display: none;
+}
+
+/* Style the Next & Prev Buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  text-decoration: none !important;
+  color: white !important;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Give position next button to right*/
+.next {
+  right: 0;
+  border-radius: 3px;
+}
+
+/* On hover background color changed*/
+.prev:hover,
+.next:hover {
+  background-color: rgba(54, 52, 52, 0.699);
+}
+
+/* Style the Caption Text */
+.caption {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 50px 50px;
+  /* margin-top: 250px; */
+  width: 100%;
+  text-align: center;
+}
+
+/* Animations */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*  */
 /* FOOTER */
 .footer {
   border-top: 4px solid #3399aa;
@@ -462,15 +609,15 @@ quote {
 }
 
 #map {
-  border: #f7941e 2px solid;
+  border: #e59659 2px solid;
 }
 
 #map2 {
-  border: #f7941e 2px solid;
+  border: #e59659 2px solid;
 }
 
 #map3 {
-  border: #f7941e 2px solid;
+  border: #e59659 2px solid;
 }
 .card {
   background-color: #f5f7f7;
@@ -502,7 +649,7 @@ quote {
 }
 
 .orange-link {
-  color: #f7941e;
+  color: #e59659;
 }
 
 .circle-img {
