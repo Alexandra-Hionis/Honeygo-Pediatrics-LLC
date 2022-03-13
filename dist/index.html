@@ -16,35 +16,40 @@
   <body>   
      <!-- Modal -->
      <div class="hidden popup text-center">
-      <button id="close">&times;</button>
-     <h2 class="text-2xl mt-5 text-center">Interested in joining us at Honeygo Pediatrics?</h2>
-     <p class="text-center mt-2">Please give us a call today!</p>
-     <a class="title text-xl mt-2"
-     href="tel:4109338101">410-933-8101</a></p>
-     <div class="mt-10 grid grid-cols-3 md:grid-cols-3">
-       <div class="modal-icon"><a href="new-patients.html">
-        <div class="zoom select-service flex-col text-center justify-center">
-          <i class="far fa-smile-plus service-icon"></i> 
-            <h2 class="service-p mont">We're accepting new patients!</h2>
-        </div></a></div>
-        <div class="modal-icon"><a href="immunizations-and-shots.html">
-          <div class="zoom select-service flex-col text-center justify-center">
-            <i class="far fa-syringe service-icon"></i> 
-              <h2 class="service-p mont">We now offer Pfizer COVID-19 vaccines for children 5 years old and up.</h2>
-          </div></a></div>
-          <div class="modal-icon"><a href="virtual-medical-services.html">
-            <div class="zoom select-service flex-col text-center justify-center">
-              <i class="far fa-phone-laptop service-icon"></i> 
-                <h2 class="service-p mont">Ask us about telehealth visits!</h2>
-            </div></a></div>
-     </div>
+      <button id="close" class="modal-btn">&times;</button>
+      <div class="container2">
+        <!-- <img src="" alt="a group of kids smiling" style="width:100%;"> -->
+        <div class="centered-modal">
+          <h2 class="text-2xl text-center text-black mobile-margin laptop-margin desktop-margin">Interested in joining us at Honeygo Pediatrics?</h2>
+          <p class="text-center mt-2 text-black">Please give us a call today!</p>
+          <a class="title text-xl mt-2"
+          href="tel:4109338101">410-933-8101</a></p>
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 text-black">
+            <div class="modal-icon"><a href="new-patients.html">
+             <div class="zoom select-service flex-col text-center justify-center">
+               <i class="far fa-smile-plus service-icon"></i> 
+                 <h2 class="service-p mont">We're accepting new patients!</h2>
+             </div></a></div>
+             <div class="modal-icon"><a href="immunizations-and-shots.html">
+               <div class="zoom select-service flex-col text-center justify-center">
+                 <i class="far fa-syringe service-icon"></i> 
+                   <h2 class="service-p mont">Pfizer COVID-19 vaccines for children 5+</h2>
+               </div></a></div>
+               <div class="modal-icon"><a href="virtual-medical-services.html">
+                 <div class="zoom select-service flex-col text-center justify-center">
+                   <i class="far fa-phone-laptop service-icon"></i> 
+                     <h2 class="service-p mont">Ask us about telehealth visits!</h2>
+                 </div></a></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <header>
       <div class="flex md:justify-between justify-center p-2 md:p-2 mx-10">
         <div class="flex space-x-4">
           <div>
-            <a href="#">
+            <a href="index.html">
               <img src="assets/images/hp-logo.svg" class="w-96 md:w-72" alt="Honeygo Pediatrics logo" /></a>
           </div>
         </div>
@@ -180,7 +185,7 @@
           <div class="centered uppercase text-2xl card-text">new patients</div>
         </div></div>
       </a>
-      <a href="#">
+      <a href="contact.html">
         <div><div class="img-container hover:opacity-50 bg-opacity-90 duration-300">
           <img src="./assets/images/building.jpg" alt="Outside image of whitemarsh health center" style="width:100%;">
           <div class="centered uppercase text-2xl card-text">contact us</div>
@@ -526,6 +531,7 @@
    <script type="text/javascript" src="/node_modules/accessibility/dist/accessibility.min.js"></script>
   <!-- Script.js -->
   <script src="assets/script.js"></script>
+  <script src="assets/modal.js"></script>
   <script src="assets/testemonials.js"></script>
 </body>
 </html>
