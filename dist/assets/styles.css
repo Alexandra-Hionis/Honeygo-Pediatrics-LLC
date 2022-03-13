@@ -32,6 +32,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
+  border: 10px solid #3399aa;
   border-radius: 8px;
   padding-bottom: 100px;
 }
@@ -47,11 +48,14 @@ body {
   cursor: pointer;
 }
 
+.modal-icon {
+  margin: 10px;
+}
 /* mobile */
 @media screen and (min-device-width: 300px) {
   .popup {
     width: 90vw;
-    top: 5%;
+    top: 8%;
   }
 }
 
@@ -80,18 +84,21 @@ body {
 /* laptop and up*/
 @media screen and (min-device-width: 1024px) {
   .popup {
-    width: 35vw;
+    width: 60vw;
     top: 10%;
   }
 }
 
 @media screen and (min-device-width: 2560px) {
   .popup {
-    width: 35vw;
+    width: 50vw;
     top: 10%;
   }
 }
 
+.bloo {
+  background-color: blue;
+}
 /* Nav */
 
 .navbar {
