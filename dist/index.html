@@ -14,11 +14,10 @@
     <title>Document</title>
   </head>
   <body>   
-     <!-- Modal -->
-     <div class="hidden popup text-center">
+     <!-- Modal --> 
+     <div id="modal" style="display: none;" class="popup text-center">
       <button id="close" class="modal-btn">&times;</button>
       <div class="container2">
-        <!-- <img src="" alt="a group of kids smiling" style="width:100%;"> -->
         <div class="centered-modal">
           <h2 class="text-2xl text-center text-black mobile-margin laptop-margin desktop-margin">Interested in joining us at Honeygo Pediatrics?</h2>
           <p class="text-center mt-2 text-black">Please give us a call today!</p>
@@ -82,6 +81,7 @@
                 <div class="dropdwn-menu hidden absolute mt-5 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                   <div class="py-1" role="none">
                     <a href="new-patients.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">New Patients</a>
+                    <a href="newborn.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Newborn Care</a>
                     <a href="well-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Well Visits</a>
                     <a href="sick-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Sick Visits</a>
                     <a href="annual-physical.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Annual Physical</a>
@@ -114,6 +114,7 @@
             <div class="dropdwn-menu-mobile hidden rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                 <div class="py-1" role="none">
                 <a href="new-patients.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-0">New Patients</a>
+                <a href="newborn.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-0">Newborn Care</a>
                 <a href="well-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-1">Well Visits</a>
                 <a href="sick-visits.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Sick Visits</a>
                 <a href="annual-physical.html" class="text-custom hover:bg-gray-200 block px-4 py-2 text-xl" role="menuitem" tabindex="-1" id="menu-item-2">Annual Physical</a>
@@ -261,12 +262,6 @@
           </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-            <a href="behavioral-developmental-care.html">
-          <div class="zoom select-service flex-col text-center justify-center"> 
-            <i class="far fa-brain service-icon"></i>
-            <h2 class="service-name">Developmental & Behavioral Health</h2>
-              <p class="service-p mont">Our team will assess various aspects of your child's developmental and behavioral health.</p>
-          </div></a>
           <a href="newborn.html">
           <div class="zoom select-service flex-col text-center justify-center"> 
             <i class="far fa-baby service-icon"></i>
@@ -279,53 +274,18 @@
             <h2 class="service-name">Telehealth Visits</h2>
               <p class="service-p mont">Ask about our virtual medical services. Telemedicine is available for most illnesses.</p>
           </div></a>
+          <a href="new-patients.html">
+            <div class="zoom select-service flex-col text-center justify-center"> 
+              <i class="far fa-smile-plus service-icon"></i>
+              <h2 class="service-name">New Patients</h2>
+                <p class="service-p mont">We're accepting new patients! We look forward to meeting the needs of you and your children.</p>
+            </div></a>
         </div>
       </div>
     </section>
 
     
     <!-- Review / Testimonial slider -->
-    <!-- <section class="hero testimonials-section sub-font" id="hero-4">
-      <div class="custom-shape-divider-top-1642795764">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-        </svg>
-        </div> 
-        <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
-        <input type="radio" name="slider" title="slide2" class="slider__nav"/>
-        <input type="radio" name="slider" title="slide3" class="slider__nav"/>
-        <input type="radio" name="slider" title="slide4" class="slider__nav"/>
-        <input type="radio" name="slider" title="slide5" class="slider__nav"/>
-        <div class="slider__inner">
-        <div class="slider__contents slider -mt-20 md:mt-0" id="slideshow">
-          <quote>&rdquo;</quote>
-          <p class="slider__txt text-sm md:text-lg">My husband and I are so thankful for Dr. Wisinski's quick action and confidence in diagnosing our son. She knew exactly what to test for and had us on track with a plan to help him heal. We are grateful to the doctors and nurse practitioners for being thorough and returning our calls when we were nervous/worried about what to do. Shout out to the front office that took multiple calls/messages from a worried Mom! Thank you!</p>
-          <h2 class="slider__caption">Rosemary L.</h2>
-        </div>
-        <div class="slider__contents slider -mt-20 md:mt-0" id="slideshow">
-          <quote>&rdquo;</quote>
-          <p class="slider__txt text-sm md:text-lg">Dr. Wisinski has been my Children’s primary care physician for over 10 years. Her professionalism, expertise and knowledge has been outstanding. She’s currently seeing my youngest one and every time I go I know that my little one is in good hands. I would highly recommend Dr. Wisinski! I would also like to mention Mrs. Bonnie. She works in the office and I highly recommend her work as well. She always takes questions, answers calls and is always there to help out in any way.</p>
-          <h2 class="slider__caption">A. Czubernat</h2>
-        </div>
-        <div class="slider__contents slider" id="slideshow">
-          <quote>&rdquo;</quote>
-          <p class="slider__txt text-sm md:text-lg">My kids have been here since birth they are 10 and 13 I see dr Wisinski and dr Murakoshi and they have always been great and also Bonnie is amazing super helpful.</p>
-          <h2 class="slider__caption">Claudia H.</h2>
-        </div>
-        <div class="slider__contents slider" id="slideshow">
-          <quote>&rdquo;</quote>
-          <p class="slider__txt text-sm md:text-lg">I've never had any issues. My 13 yr.old and 2 yr.old both go there since birth. I feel they have always been well taken care of.</p>
-          <h2 class="slider__caption">Laura R.</h2>
-        </div>
-        <div class="slider__contents slider" id="slideshow">
-          <quote>&rdquo;</quote>
-          <p class="slider__txt text-sm md:text-lg">Great doctors and assistants! Always make my little one smile even when he’s getting immunizations</p>
-          <h2 class="slider__caption">Julie B.</h2>
-        </div>
-    </div>
-    <!-- </section>   -->
     <section class="hero testimonials-section" id="hero-4">
       <div class="custom-shape-divider-top-1642795764">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -524,13 +484,13 @@
       </div>
     </footer>
     </section>
-
   <!-- Scripts -->
    <!-- Mapbox -->
    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-   <script type="text/javascript" src="/node_modules/accessibility/dist/accessibility.min.js"></script>
+   <script type="text/javascript" src="node_modules/accessibility/src/accessibility.js"></script>
   <!-- Script.js -->
   <script src="assets/script.js"></script>
+  <script src="assets/accessibilityFeature.js"></script>
   <script src="assets/modal.js"></script>
   <script src="assets/testemonials.js"></script>
 </body>
