@@ -1,4 +1,4 @@
-import { Accessibility } from "./accessibility/src/main";
+// Accessibility button
 window.addEventListener(
   "load",
   function () {
