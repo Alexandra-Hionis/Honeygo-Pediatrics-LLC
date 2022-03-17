@@ -496,6 +496,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-5 {
   margin-top: 1.25rem;
 }
+.-mt-5 {
+  margin-top: -1.25rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -513,9 +516,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .-mt-2 {
   margin-top: -0.5rem;
-}
-.-mt-5 {
-  margin-top: -1.25rem;
 }
 .block {
   display: block;
@@ -565,8 +565,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.flex-row {
+  flex-direction: row;
 }
 .flex-col {
   flex-direction: column;
@@ -672,10 +672,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 .pb-20 {
   padding-bottom: 5rem;
@@ -949,11 +945,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
