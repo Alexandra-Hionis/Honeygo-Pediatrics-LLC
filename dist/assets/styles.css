@@ -1657,3 +1657,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.75rem;
   }
 }
+
+.green {
+  margin-bottom: 60px;
+}
