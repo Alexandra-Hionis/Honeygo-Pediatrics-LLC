@@ -1,4 +1,3 @@
-// Accessibility button
 window.addEventListener(
   "load",
   function () {
@@ -6,6 +5,16 @@ window.addEventListener(
   },
   false
 );
+var options = {
+  icon: {
+    position: {
+      bottom: { size: 50, units: "px" },
+      right: { size: 0, units: "px" },
+      type: "fixed",
+    },
+  },
+};
+new Accessibility(options);
 // Navbar drop down functionality and mobile toggle button
 
 // grab everything we need
