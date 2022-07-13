@@ -1,7 +1,7 @@
-window.addEventListener(
-  "load",
-  function () {
-    new Accessibility();
-  },
-  false
-);
+// window.addEventListener(
+//   "load",
+//   function () {
+//     new Accessibility();
+//   },
+//   false
+// );
